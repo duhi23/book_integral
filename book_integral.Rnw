@@ -1,0 +1,180 @@
+\documentclass{book}
+
+\usepackage{etex}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{exscale}
+\usepackage[english,spanish,es-nolayout]{babel}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,bm,amsthm,multicol,ifthen}
+\usepackage{yhmath}
+\usepackage{tikz}
+\usepackage[svgnames]{pstricks}
+\usepackage{multido,pst-plot,pst-func,pst-node,pst-text}
+\usepackage{pst-eucl,pst-solides3d,pstricks-add}
+\usepackage{lscape}
+\usepackage{makeidx}
+\usepackage{paralist}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage[spanish]{varioref}
+\usepackage[scaled]{helvet}
+
+\usepackage{enumitem}
+\usepackage{nextpage}
+
+\usepackage[calcwidth]{titlesec}
+\usepackage{fancyhdr}
+
+\usepackage{xr}
+\usepackage[paperwidth=18cm,paperheight=26cm,twoside,%
+    left=2.2cm,right=1.7cm,top=2.25cm,bottom=1.5cm]{geometry} % con 10pt.
+%\usepackage[a4paper,twoside,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} %con 11pt
+
+\pagestyle{fancy}
+%\makeindex
+
+%\input Definiciones/yhmath_restricted.sty
+\input Definiciones/macmatjc
+\input Definiciones/maccaljc
+
+%\externaldocument[L-]{Limites/Limites}
+
+\title{Cálculo}
+\author{Escuela Politécnica Nacional}
+\date{Octubre 2009}
+
+\includeonly{%
+%            Limites/Limites,
+%            Derivadas/DerivadaMotivacion,
+%            Derivadas/DerivadaConcepto,
+%            Derivadas/DerivadaAplicaciones,
+%            Prefacio,
+            Integrales/IntegralIndefinida,
+            Integrales/IntegralDefinida,
+            Integrales/IntegralAplicaciones,
+            Integrales/IntegralLogaritmoExponencial,
+            Sucesiones/SucesionesSeries,
+            Apendices/TablasIntegracion
+            }
+
+\setlength{\headheight}{13.70743pt}
+
+\allowdisplaybreaks
+
+
+
+%\usepackage[colorlinks,linkcolor=red]{hyperref}
+\makeindex
+\begin{document}
+\frontmatter
+
+\newlength{\drop}
+\newcommand*{\titleTMB}{\begingroup% Three Men in a Boat
+\drop=0.1\textheight
+\centering
+\settowidth{\unitlength}{\LARGE CÁLCULO EN UNA VARIABLE}
+\vspace*{\baselineskip}
+{\Large\scshape Cuadernos de Matemática}\\[\baselineskip]
+{\Large\scshape de la Escuela Politécnica Nacional}\\[7.5\baselineskip]
+{\large\scshape Germán Rojas}\\[\baselineskip]
+%{\large\scshape G. Rojas}\\[\baselineskip]
+\rule{\unitlength}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\unitlength}{0.4pt}\\[\baselineskip]
+{\LARGE CÁLCULO EN UNA VARIABLE}\\[\baselineskip]
+{\itshape Cálculo Integral}\\[0.2\baselineskip]
+%{\itshape Cálculo Integral}\\[0.2\baselineskip]
+\rule{\unitlength}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\unitlength}{1.6pt}\\[\baselineskip]
+\par
+\vfill
+\includegraphics[scale=0.15]{Logos/LogoCiencias.eps}\hspace{4em}
+\includegraphics[scale=0.15]{Logos/LogodMatematica.eps}\par
+\vspace*{\drop}
+
+\newpage
+
+\raggedright
+\vspace*{\baselineskip}
+{\large\textbf{Cuaderno de Matemática No. 2}}\\[0.6\baselineskip]
+{\large\scshape Cálculo en una variable: Cálculo Integral} \\[0.5\baselineskip]
+{\large\scshape Germán Rojas I.}
+\par
+
+\vspace*{4\baselineskip}
+
+\textbf{Responsable de la Edición}: Juan Carlos Trujillo \\
+\textbf{Revisión técnica}: Alejandro Araujo y Rolando Sáenz \\
+\textbf{Asistentes}: David Yánez, Maribel Montenegro \\
+\textbf{Portada}: Byron Reascos\par
+
+\vspace*{3\baselineskip}
+
+Registro de derecho autoral No. 34994\\
+ISBN: 978-9978-383-02-5
+
+\vspace*{4\baselineskip}
+
+Publicado por la Unidad de Publicaciones de la Facultad de Ciencias de la Escuela Politécnica Nacional, Ladrón de Guevara E11-253, Quito, Ecuador. \par
+
+\vspace*{3\baselineskip}
+
+\copyright \ Escuela Politécnica Nacional 2010
+
+
+\endgroup}
+
+\pagestyle{empty}
+\titleTMB
+\cleartooddpage[\thispagestyle{empty}]
+%\clearpage
+
+\pagestyle{fancy}
+
+%\begingroup
+%\newcommand{\contentsformat}[1]{%
+%\parbox[b]{.75\textwidth}{\filleft\bfseries #1}}
+%\titleformat{\chapter}% command
+%            [block]% shape
+%            {\filleft\fontsize{29.86}{29.86}\selectfont\sffamily}% format
+%            {}% label
+%            {0pt}% sep
+%            {\contentsformat}% before code
+
+\def\contentsname{Tabla de contenidos}
+\tableofcontents
+%\endgroup
+
+\include{Prefacio}
+
+\begingroup
+\mainmatter
+%\input Definiciones/FormatoCapitulos.tex
+\input Definiciones/FormatoEncabezados.tex
+\parindent 15.0pt
+%\include{Limites/Limites}
+%\include{Derivadas/DerivadaMotivacion}
+%\include{Derivadas/DerivadaConcepto}
+%\include{Derivadas/DerivadaAplicaciones}
+\include{Integrales/IntegralIndefinida}
+\include{Integrales/IntegralDefinida}
+\include{Integrales/IntegralAplicaciones}
+\include{Integrales/IntegralLogaritmoExponencial}
+\include{Sucesiones/SucesionesSeries}
+
+\appendix
+\include{Apendices/TablasIntegracion}
+\endgroup
+%\mainmatter
+%\def\indexname{\textsf{Índice Alfabético}}
+
+\setcounter{page}{191}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{Bibliografia/Biblio}
+\cleartooddpage[\thispagestyle{empty}]
+
+\printindex
+\end{document}
